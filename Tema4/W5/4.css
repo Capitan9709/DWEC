@@ -1,0 +1,62 @@
+body{
+    font-family: sans-serif;
+    color: darkgray;
+    margin-left: 5em;
+}
+h2{
+    color: grey;
+}
+#account{
+    margin-top: 3em;
+    font-size: 14px;
+}
+input{
+    padding: 7px;
+    padding-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+input+input{
+    margin-left: 45px;
+}
+label{
+    font-weight: bold;
+    color: grey;
+}
+label[for="apel"]{
+    margin-left: 10em;
+}
+label[for="mail"]{
+    margin-left: 12em;
+}
+label[for="concontra"]{
+    margin-left: 10em;
+}
+input[type="checkbox"]{
+    margin-top: 40px;
+}
+input[id="ch2"]{
+    margin-top: 10px;
+}
+label[for="ch1"]{
+    font-weight: normal;
+}
+label[for="ch2"]{
+    font-weight: normal;
+}
+input[type="submit"]{
+    margin-top: 3em;
+    padding: 12px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background-color: rgb(0, 166, 255);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 166, 255);
+    font-weight: bold;
+}

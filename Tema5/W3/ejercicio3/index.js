@@ -22,7 +22,7 @@ function generarImagenesAleatorias() {
             
             cartas[randomPosicion].setAttribute("imagen",imgs);
             let imagen = cartas[randomPosicion].children[0];
-            imagen.setAttribute("src","media/" + imgs + ".svg");
+            imagen.setAttribute("src","imgs/" + imgs + ".svg");
             imagen.setAttribute("alt",imgs);
         }
         // Eliminar el imagen de la lista de imagenes
@@ -63,12 +63,13 @@ window.onload = generarImagenesAleatorias();
   let contador = 0;
   let primeraCarta = "";
   let segundaCarta = "";
-  let numeroVidas = 10;
   let numeroPuntos = 0;
   let timerPulsado = false;
+  // Se intento implementar las vidas
+  let numeroVidas = 10;
   
   let cartas = document.querySelectorAll(".imagenes .carta");
-  let vidas = document.getElementById("vidas");
+  let result = document.getElementById("resultado");
   
   cartas.forEach((carta) => {
     carta.addEventListener("click", () => {
@@ -116,8 +117,11 @@ window.onload = generarImagenesAleatorias();
           }
         }
       } else {
-        vidas.innerHTML = `You lost!`;
-        vidas.style.color = "red";
+        result.innerHTML = `You lost!`;
+        result.style.backgroundColor = "red";
+        result.style.color = "white";
+        result.style.padding = "4px";
+        result.style.borderRadius = "5px";
         pararTimer();
         cartas.forEach((carta) => {
           carta.style.opacity = 0.5;
@@ -125,8 +129,11 @@ window.onload = generarImagenesAleatorias();
       }
   
       if (numeroPuntos == 5) {
-        vidas.innerHTML = `You win!`;
-        vidas.style.color = "green";
+        result.innerHTML = `You win!`;
+        result.style.backgroundColor = "green";
+        result.style.color = "white";
+        result.style.padding = "4px";
+        result.style.borderRadius = "5px";
         pararTimer();
       }
     });
